@@ -1,7 +1,20 @@
 # Exploratory Data Analysis: Determining Work Areas in West Java
 
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Development Team](#development-team)
+3. [Creation Date](#creation-date)
+4. [Analysis Questions](#analysis-questions)
+5. [Datasets Used](#datasets-used)
+6. [Data Analysis Process](#data-analysis-process)
+7. [Technologies and Libraries Used](#technologies-and-libraries-used)
+8. [Final Results](#final-results)
+9. [How to Run the Project](#how-to-run-the-project)
+10. [File Structure](#file-structure)
+11. [Notes](#notes)
+
 ## Introduction
-This project aims to assist individuals in determining work locations in West Java by considering various factors, such as per capita expenditure, minimum wage, number of employed population, and poverty line. The data used are sourced from the Central Statistics Agency (BPS) and the West Java Manpower and Transmigration Office.
+This project aims to assist individuals in determining work locations in West Java by considering various factors, such as expenditure per capita, minimum wages, the number of employed residents, and the poverty line. The data used is sourced from the Central Statistics Agency (BPS) and the Department of Manpower and Transmigration of West Java.
 
 ## Development Team
 Group 3:
@@ -12,59 +25,59 @@ Group 3:
 5. Septiani Eka Putri (2206000)
 
 ## Creation Date
-- Initial: September 24, 2023
-- Revised: October 1, 2023
+- Start: September 24, 2023
+- Revision: October 1, 2023
 
 ## Analysis Questions
-1. Districts/Cities in West Java Province with the 5 highest and 5 lowest Minimum Wages in 2023.
-2. Trends in District/City Minimum Wages over the past few years.
-3. Correlation between per capita expenditure, minimum wage, number of employed population, and per capita poverty line.
-4. Distribution of data on per capita expenditure, minimum wage, number of employed population, and per capita poverty line.
+1. Districts/Cities in West Java Province with the 5 highest and 5 lowest minimum wages in 2023.
+2. Trends in minimum wages in districts/cities over the past few years.
+3. Correlation between expenditure per capita, minimum wages, the number of employed residents, and the poverty line per capita.
+4. Distribution of data on expenditure per capita, minimum wages, the number of employed residents, and the poverty line per capita.
 
 ## Datasets Used
-1. **Per Capita Expenditure (bps-od_17106_total_per_capita_expenditure_district_city_data.csv)**
-2. **Minimum Wage (disnakertrans-od_19868_list_of_minimum_wage_district_city_in_drh_prov_jabar_data.csv)**
-3. **Number of Employed Population (disnakertrans-od_15793_number_of_employed_population_by_district_city_data.csv)**
-4. **Poverty Line (bps-od_17110_number_of_poverty_line_per_capita_per_month__district_data.csv)**
-5. **Inflation Rate (bps-od_17137_inflation_value_based_on_seven_cities_data.csv)**
+1. **Expenditure Per Capita (bps-od_17106_jml_pengeluaran_per_kapita__kabupatenkota_data.csv)**
+2. **Minimum Wages (disnakertrans-od_19868_daftar_upah_minimum_kabupatenkota_di_drh_prov_jabar_data.csv)**
+3. **Number of Employed Residents (disnakertrans-od_15793_jumlah_penduduk_yang_bekerja_berdasarkan_kabupatenkota_data.csv)**
+4. **Poverty Line (bps-od_17110_angka_garis_kemiskinan_per_kapita_per_bulan__kabupaten_data.csv)**
+5. **Inflation Rate (bps-od_17137_nilai_inflasi_berdasarkan_tujuh_kota_data.csv)**
 
 ## Data Analysis Process
-1. **Data Exploration**: Reviewing the dataset structure, cleaning the data (removing unnecessary columns, handling null/NaN values).
-2. **Data Average**: Calculating the average for each dataset based on Regency/City.
-3. **Data Merge**: Combining all datasets for correlation and distribution analysis.
-4. **Normalization**: Performing Min-Max normalization to ensure data consistency.
+1. **Data Exploration**: Reviewing dataset structures, cleaning data (removing unnecessary columns, handling null/NaN values).
+2. **Data Averaging**: Calculating averages for each dataset based on districts/cities.
+3. **Data Merging**: Merging all datasets for correlation and distribution analysis.
+4. **Normalization**: Applying Min-Max normalization to ensure data consistency.
 
 ## Technologies and Libraries Used
 - **Programming Language**: Python
 - **Libraries**:
-- `numpy` and `pandas`: Data processing
-- `matplotlib` and `seaborn`: Data visualization
+  - `numpy` and `pandas`: Data processing
+  - `matplotlib` and `seaborn`: Data visualization
 
 ## Final Results
-1. Districts/Cities with the Highest Minimum Wages:
-- Karawang has the highest UMK due to low inflation and a relatively low population density.
-
-2. Districts/Cities with the Lowest Minimum Wages:
-- Banjar has the lowest UMK due to lower cost of living and population density.
+1. Districts/Cities with the highest minimum wages:
+   - Karawang has the highest minimum wage due to low inflation and moderate population density.
+   
+2. Districts/Cities with the lowest minimum wages:
+   - Banjar has the lowest minimum wage due to lower living costs and smaller population density.
 
 3. Inflation analysis:
-- Bekasi has the highest inflation due to its high population.
-- Cirebon has the lowest inflation due to lower living costs.
+   - Bekasi has the highest inflation due to its large population.
+   - Cirebon has the lowest inflation due to lower living needs.
 
-4. Distribution and correlation data:
-- The correlation between per capita expenditure, UMK, number of employed population, and poverty line provides an overview of the relationship between factors in determining the optimal work location.
+4. Data distribution and correlation:
+   - Correlations between expenditure per capita, minimum wages, the number of employed residents, and the poverty line provide insights into the relationships among factors in determining optimal work locations.
 
 ## How to Run the Project
-1. Make sure Python and the required libraries are installed.
-2. Put all datasets in the same directory as the script.
+1. Ensure Python and the required libraries are installed.
+2. Place all datasets in the same directory as the script.
 3. Run the script file to perform the analysis.
 
 ## File Structure
-- `bps-od_17106_jml_pengeluaran_per_kapita__kabupatenkota_data.csv`: Per capita expenditure dataset
+- `bps-od_17106_jml_pengeluaran_per_kapita__kabupatenkota_data.csv`: Expenditure per capita dataset
 - `disnakertrans-od_19868_daftar_upah_minimum_kabupatenkota_di_drh_prov_jabar_data.csv`: Minimum wage dataset
-- `disnakertrans-od_15793_jumlah_penduduk_yang_bekerja_berdasarkan_kabupatenkota_data.csv`: Dataset of number of working population
-- `bps-od_17110_jumlah_lin_kemiskinan_per_capita_per_bulan__kabupaten_data.csv`: Dataset of poverty line
-- `bps-od_17137_nilai_inflation_berdasarkan_tujuh_kota_data.csv`: Dataset of inflation
+- `disnakertrans-od_15793_jumlah_penduduk_yang_bekerja_berdasarkan_kabupatenkota_data.csv`: Number of employed residents dataset
+- `bps-od_17110_angka_garis_kemiskinan_per_kapita_per_bulan__kabupaten_data.csv`: Poverty line dataset
+- `bps-od_17137_nilai_inflasi_berdasarkan_tujuh_kota_data.csv`: Inflation dataset
 
-## Note
-This project could be further developed to include predictive analytics, such as using machine learning algorithms to recommend optimal work locations based on individual preferences.
+## Notes
+This project can be further developed to include predictive analysis, such as using machine learning algorithms to recommend optimal work locations based on individual preferences.
